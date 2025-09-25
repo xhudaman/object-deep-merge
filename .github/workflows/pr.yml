@@ -63,5 +63,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
-      - run: pnpm install --frozen-lockfile --prod
-      - run: pnpm --if-present build
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
