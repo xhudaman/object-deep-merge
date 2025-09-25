@@ -65,3 +65,8 @@ jobs:
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+      - name: build-artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: object-deep-merge-${{ matrix.node-version }}-${{ github.sha }}
+          path: dist/*
